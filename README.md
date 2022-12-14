@@ -1,4 +1,4 @@
-# go into the project
+ go into the project
 cd student-management-system
 
 # create a .env file
