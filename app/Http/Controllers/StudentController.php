@@ -139,14 +139,12 @@ class StudentController extends Controller
     {
         Student::find($id)->delete();
         StudentMark::where('student_id','=',$id)->delete();
-        // return redirect()->back();
         return back()->with('success','Deleted successfully.');
     }
 
 
     public function studentMarklist()
     {
-        // $students = Student::get();
         $term = Term::get();
         $student_mark = StudentMark::select('terms.name as term_name','student_marks.*')
         ->leftjoin('terms','terms.id','=','student_marks.term')->get();
@@ -195,7 +193,6 @@ class StudentController extends Controller
     public function markDestroy($id)
     {
         StuStudentMarkdent::find($id)->delete();
-        // return redirect()->back();
         return back()->with('success','Deleted successfully.');
     }
 
