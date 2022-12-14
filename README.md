@@ -34,6 +34,6 @@ php artisan db:seed
 # run the project
 php artisan serve
 
-#login credential
+# login credential
 username :: admin@gmail.com<br>
 password :: 123456
