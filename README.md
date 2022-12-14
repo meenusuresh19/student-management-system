@@ -1,31 +1,35 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# go into the project
+cd student-management-system
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# create a .env file
+cp .env.example .env
 
-## About Laravel
+# install composer dependencies
+composer update
 
+# install npm dependencies
+npm install
 
-## Learning Laravel
+# generate a key for your application
+php artisan key:generate
 
+# create a local MySQL database (make sure you have MySQL up and running)
+mysql -u root
 
-## Laravel Sponsors
+> create database student_management;
+> exit;
 
+# add the database connection config to your .env file
+DB_CONNECTION=mysql
+DB_DATABASE=student_management
+DB_USERNAME=root
+DB_PASSWORD=
 
-### Premium Partners
+# run the migration files to generate the schema
+php artisan migrate
 
+# seed your databse 
+php artisan db:seed
 
-## Contributing
-
-
-## Code of Conduct
-
-
-## Security Vulnerabilities
-
-
-## License
+# run the project
+php artisan serve
