@@ -33,3 +33,7 @@ php artisan db:seed
 
 # run the project
 php artisan serve
+
+#login credential
+username :: admin@gmail.com
+password :: 123456
