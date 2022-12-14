@@ -20,8 +20,8 @@ mysql -u root
 > exit;
 
 # add the database connection config to your .env file
-DB_CONNECTION=mysql
-DB_DATABASE=student_management
+DB_CONNECTION=mysql<br>
+DB_DATABASE=student_management<br>
 DB_USERNAME=root
 DB_PASSWORD=
 
